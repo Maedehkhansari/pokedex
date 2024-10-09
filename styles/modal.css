@@ -1,0 +1,123 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    background: rgb(233 99 64);
+    padding: 10px 20px;
+    border-radius: 10px;
+    gap: 16px;
+}
+
+.header-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-modal h1 {
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.main-modal {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.main-modal img {
+    height: 230px;
+}
+
+.modal .close-icon,
+.modal .np-icon {
+    height: 45px;
+    cursor: pointer;
+}
+
+.modal .close-icon:hover,
+.modal .np-icon:hover {
+    filter: brightness(0.5);
+}
+
+
+.modal-container .types {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-container .types img {
+    height: 25px;
+}
+
+.modal-container .discription {
+    display: flex;
+    justify-content: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    width: 70%;
+    font-family: "Edu AU VIC WA NT Dots", system-ui;
+    font-weight: bold;
+    color: #e7e1d9;
+    text-align: center;
+}
+
+table tr td {
+    padding: 0 5px;
+}
+
+table tr td:first-child {
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .main-modal {
+        gap: 10px;
+    }
+
+    .main-modal img {
+        height: 160px;
+    }
+
+    .modal-container .types {
+        gap: 16px;
+    }
+
+    .modal-container .types img {
+        height: 20px;
+    }
+
+    table,
+    th,
+    td {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-modal {
+        gap: 3px;
+        flex-direction: column;
+    }
+    .header-modal {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,161 @@
+.bg-normal {
+    background: #74abd170;
+}
+
+.bg-fighting {
+    background: #e5912170;
+}
+
+.bg-flying {
+    background: #74abd170;
+}
+
+.bg-poison {
+    background: #9454cc70;
+}
+
+.bg-ground {
+    background: #a5733c70;
+}
+
+.bg-rock {
+    background: #aaa58170;
+}
+
+.bg-bug {
+    background: #a0a02870;
+}
+
+.bg-ghost {
+    background: #6e457070;
+}
+
+.bg-steel {
+    background: #6badc970;
+}
+
+.bg-fire {
+    background: #e5613e70;
+}
+
+.bg-water {
+    background: #309ae270;
+}
+
+.bg-grass {
+    background: #43993770;
+}
+
+.bg-electric {
+    background: #e0bd2870;
+}
+
+.bg-psychic {
+    background: #ea6c8d70;
+}
+
+.bg-ice {
+    background: #47c9c970;
+}
+
+.bg-dragon {
+    background: #576fbd70;
+}
+
+.bg-dark {
+    background: #4f474770;
+}
+
+.bg-fairy {
+    background: #e28de270;
+}
+
+.bg-stellar {
+    background: #82828270;
+}
+
+.bg-unknown {
+    background: #82828270;
+}
+
+/* Header and footer */
+
+.hf-bg-normal {
+    background: #74abd1de;
+}
+
+.hf-bg-fighting {
+    background: #e59121de;
+}
+
+.hf-bg-flying {
+    background: #74abd1de;
+}
+
+.hf-bg-poison {
+    background: #9454ccde;
+}
+
+.hf-bg-ground {
+    background: #a5733cde;
+}
+
+.hf-bg-rock {
+    background: #aaa581de;
+}
+
+.hf-bg-bug {
+    background: #a0a028de;
+}
+
+.hf-bg-ghost {
+    background: #6e4570de;
+}
+
+.hf-bg-steel {
+    background: #6badc9de;
+}
+
+.hf-bg-fire {
+    background: #e5613ede;
+}
+
+.hf-bg-water {
+    background: #309ae2de;
+}
+
+.hf-bg-grass {
+    background: #439937de;
+}
+
+.hf-bg-electric {
+    background: #e0bd28de;
+}
+
+.hf-bg-psychic {
+    background: #ea6c8dde;
+}
+
+.hf-bg-ice {
+    background: #47c9c9de;
+}
+
+.hf-bg-dragon {
+    background: #576fbdde;
+}
+
+.hf-bg-dark {
+    background: #4f4747de;
+}
+
+.hf-bg-fairy {
+    background: #e28de2de;
+}
+
+.hf-bg-stellar {
+    background: #828282de;
+}
+
+.hf-bg-unknown {
+    background: #828282de;
+}

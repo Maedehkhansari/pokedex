@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./img/12450983.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/colors.css">
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
+    <title>Pokedex</title>
+</head>
+
+<body class="h-100" onload="init()">
+
+    <header>
+        <div class="header-container" onmouseenter="">
+            <div class="left-header">
+                <a href="index.html">
+                    <img src="./img/logo.webp" alt="logo">
+                </a>
+            </div>
+            <div class="right-header">
+                <input type="text" class="input-field" id="search-input" placeholder="Search Pokemon"
+                    onkeyup="search()">
+                <img src="./img/play.png" alt="search">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="modal d-none" id="modal">
+
+        </div>
+
+        <div class="loading d-none" id="loading">
+            <img src="./img/pokemon-pikachu.gif" alt="">
+        </div>
+
+        <div class="pokemons" id="pokemons"></div>
+
+        <div class="pokemons d-none" id="filter-pokemons"></div>
+
+        <div class="loadmore-container">
+            <span class="loadmore-button" id="loadmore" onclick="loadMore()">
+                <img src="./img/loadmore.png" alt="">
+            </span>
+        </div>
+
+    </main>
+
+    <footer>
+        <span>Maedeh khonsari</span>
+        <span>© 2024</span>
+    </footer>
+
+</body>
+
+</html>

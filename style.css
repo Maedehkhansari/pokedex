@@ -1,0 +1,261 @@
+html,
+body {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url('img/background.jpg') no-repeat fixed top;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: rgb(0 0 0 / 60%);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-header img {
+    width: 150px;
+}
+
+.right-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.right-header img {
+    height: 50px;
+    width: 50px;
+    animation: moveSmallPokemon 5s infinite linear;
+}
+
+main {
+    background: rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 / 55%);
+}
+
+.pokemons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.pokemon {
+    width: 225px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: rotate 800ms linear;
+}
+
+.pokemon-card:hover>.pokemon {
+    rotate: y 360deg;
+}
+
+.pokemon-card:hover>.pokemon .pokemon-image .front-image {
+    opacity: 0;
+}
+
+.pokemon-card:hover>.pokemon .pokemon-image .back-image {
+    opacity: 0.7;
+}
+
+.pokemon-header {
+    background: #183641;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 10px 10px 0 0;
+    border: solid 3px #ffcb08;
+    border-bottom: 0;
+}
+
+.pokemon-header span {
+    font-size: 23px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+
+}
+
+.pokemon-image {
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: rotate 800ms linear;
+    position: relative;
+    border: solid 3px #ffcb08;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.pokemon-image img {
+    aspect-ratio: 1 / 1;
+    height: 145px;
+    position: absolute;
+    -webkit-transition: opacity 1000ms;
+    transition: opacity 1000ms;
+}
+
+.pokemon-image .back-image {
+    opacity: 0;
+}
+
+.pokemon h2 {
+    font-size: 23px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+.pokemon-footer {
+    background: #183641;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    border: solid 3px #ffcb08;
+    border-top: 0;
+}
+
+.pokemon-footer img {
+    width: 80px;
+}
+
+footer {
+    background: rgb(0 0 0 / 80%);
+    display: flex;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.loadmore-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loadmore-button {
+    background-color: #ffffffab;
+    color: rgb(0 0 0 / 68%);
+    padding: 5px 5px 0px 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.loadmore-button:hover {
+    background-color: aliceblue;
+}
+
+.loadmore-button img {
+    height: 55px;
+    animation: rotation 3s infinite linear;
+}
+
+.input-field {
+    border-radius: 12px;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes moveSmallPokemon {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .header-container {
+        flex-direction: column;
+    }
+    .loadmore-container {
+        justify-content: center;
+    }
+}
