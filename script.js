@@ -20,7 +20,6 @@ async function getData(path = "") {
 
 async function getPokemosFromApiAndSaveToArray() {
     let pokemonLimitedData = await getData(`pokemon?limit=${LIMIT}&offset=${offsetNumber}`);
-
     for (let i = 0; i < pokemonLimitedData.results.length; i++) {
         pokemons.push({
             id: i + 1 + offsetNumber,
@@ -31,37 +30,27 @@ async function getPokemosFromApiAndSaveToArray() {
 
 async function renderAll() {
     showLoading();
-
     await getPokemosFromApiAndSaveToArray();
-
     await renderPokemons();
-
     updateOffsetNumber();
-
     hideLoading();
 }
 
 async function renderPokemons() {
     for (let i = offsetNumber; i < pokemons.length; i++) {
-
         let uniqId = pokemons[i].id;
-
         let pokemonName = pokemons[i].name;
-
         let pokemonDetail = await getData("pokemon/" + pokemonName);
         let pokemonsElement = document.getElementById("pokemons");
         pokemonsElement.innerHTML += pokemonTemplate(uniqId, pokemonDetail);
-
         await renderPokemonTypes(pokemonDetail, uniqId);
     }
 }
 
 async function renderPokemonTypes(pokemonDetail, uniqId) {
     const pokemonTypeElements = document.querySelectorAll('.pokemon-type-' + uniqId);
-
     for (let i = 0; i < pokemonTypeElements.length; i++) {
         pokemonTypeElements[i].innerHTML = '';
-
         for (let j = 0; j < pokemonDetail.types.length; j++) {
             let pokemonTypeName = pokemonDetail.types[j].type.name;
             let pokemonType = await getData("type/" + pokemonTypeName);
@@ -73,19 +62,12 @@ async function renderPokemonTypes(pokemonDetail, uniqId) {
 async function renderFilterPokemons() {
     let filterPokemonsElement = document.getElementById("filter-pokemons");
     filterPokemonsElement.innerHTML = '';
-
     for (let i = 0; i < filterPokemons.length; i++) {
-
         let uniqId = filterPokemons[i].id;;
-
         let pokemonName = filterPokemons[i].name;
-
         let pokemonDetail = await getData("pokemon/" + pokemonName);
-
         filterPokemonsElement.innerHTML += pokemonTemplate(uniqId, pokemonDetail);
-
         await renderPokemonTypes(pokemonDetail, uniqId);
-
     }
 }
 
@@ -105,11 +87,9 @@ function hideLoading() {
 
 async function search() {
     let searchInputValue = document.getElementById('search-input').value;
-
     if (searchInputValue.length >= 3) {
         filterPokemons = pokemons.filter(pokemon => pokemon.name.includes(searchInputValue));
         renderFilterPokemons();
-
         showFilterPokemons();
     } else {
         hideFilterPokemons();
@@ -136,7 +116,6 @@ async function showModal(uniqId) {
     document.getElementById("modal").classList.remove('d-none');
     let modal = document.getElementById('modal');
     modal.innerHTML = pokemonModalTemplate(pokemonDetail, uniqId);
-
     await renderPokemonTypes(pokemonDetail, uniqId);
 }
 
